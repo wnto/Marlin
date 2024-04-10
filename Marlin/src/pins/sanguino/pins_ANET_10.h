@@ -112,10 +112,28 @@
 
 //
 // Limit Switches
-//
-#define X_STOP_PIN                            18
+
+
+//Desativei
+/*#define X_STOP_PIN                            18
 #define Y_STOP_PIN                            19
 #define Z_STOP_PIN                            20
+*/
+
+//adicionado por mim:
+#define X_STOP_PIN                            18
+#define Y_MAX_PIN                             19 //modificado por mim
+#define Z_STOP_PIN                            20
+
+/* template de outra placa como referência
+#define X_MIN_PIN                           PA15
+#define X_MAX_PIN                           PG7
+#define Y_MIN_PIN                           PA12
+#define Y_MAX_PIN                           PG8
+#define Z_MIN_PIN                           PA11
+#define Z_MAX_PIN                           PC4
+*/
+
 
 //
 // Steppers

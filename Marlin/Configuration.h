@@ -1244,7 +1244,7 @@
  * Override with M92 (when enabled below)
  *                                      X, Y, Z [, I [, J [, K...]]], E0 [, E1[, E2...]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 79.66, 79.44, 402.90, 233.86 } //edp
+#define DEFAULT_AXIS_STEPS_PER_UNIT { 80, 80, 410, 103 } // testados em 20240409// 80, 80, 400, 95
 
 /**
  * Enable support for M92. Disable to save at least ~530 bytes of flash.
@@ -1753,7 +1753,7 @@
 
 // Invert the stepper direction. Change (or reverse the motor connector) if an axis goes the wrong way.
 #define INVERT_X_DIR true
-#define INVERT_Y_DIR true
+#define INVERT_Y_DIR false //fb manter assim
 #define INVERT_Z_DIR true
 //#define INVERT_I_DIR false
 //#define INVERT_J_DIR false
@@ -1797,7 +1797,7 @@
 // Direction of endstops when homing; 1=MAX, -1=MIN
 // :[-1,1]
 #define X_HOME_DIR -1
-#define Y_HOME_DIR  -1 //check tem que ficar em -1
+#define Y_HOME_DIR  1 //esfb manter assim
 #define Z_HOME_DIR -1
 //#define I_HOME_DIR -1
 //#define J_HOME_DIR -1
@@ -1828,11 +1828,11 @@
 #define Y_BED_SIZE 295
 
 // Travel limits (linear=mm, rotational=°) after homing, corresponding to endstop positions.
-#define X_MIN_POS 0 //check colocar valor negativo aqiu també?
-#define Y_MIN_POS -2
+#define X_MIN_POS 0 
+#define Y_MIN_POS 0 //fb tesatr alguns valores aqui até otimizar o uso de y
 #define Z_MIN_POS 0
 #define X_MAX_POS X_BED_SIZE
-#define Y_MAX_POS Y_BED_SIZE
+#define Y_MAX_POS Y_BED_SIZE+5 //talvez aumentar aqui
 #define Z_MAX_POS 236
 //#define I_MIN_POS 0
 //#define I_MAX_POS 50
